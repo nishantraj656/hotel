@@ -1,0 +1,23 @@
+starterkit/vendor/
+starterkit/node_modules/
+starterkit/npm-debug.log
+starterkit/yarn-error.log
+
+# Laravel 4 specific
+starterkit/bootstrap/compiled.php
+starterkit/app/storage/
+
+# Laravel 5 & Lumen specific
+starterkit/public/storage
+starterkit/public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+starterkit/public_html/storage
+starterkit/public_html/hot
+
+storage/*.key
+starterkit/.env
+starterkit/Homestead.yaml
+starterkit/Homestead.json
+starterkit/.vagrant
+starterkit/.phpunit.result.cache
