@@ -1,5 +1,4 @@
 <x-auth-layout>
-
     <!--begin::Form-->
     <form class="form w-100" novalidate="novalidate" id="kt_password_reset_form" data-kt-redirect-url="{{ route('login') }}" action="{{ route('password.request') }}">
         @csrf
@@ -37,5 +36,4 @@
         <!--end::Actions-->
     </form>
     <!--end::Form-->
-
 </x-auth-layout>

@@ -1,52 +1,31 @@
 <x-auth-layout>
-    <div class="form-section">
-        <img src="{{ image('logos/logo2.png') }}"  class="logo">
-        <form action="">
-            <div class="input-addon">
-                <input type="email" placeholder="Email">
-            </div>
-            <div class="input-addon">
-                <input type="password" placeholder="Password">
-            </div>
-            <div class="text-right">
-                <a href="">Password Dimenticata?</a>
-            </div>
-            <div class="loginbtn">
-                <button>Sigh In</button>
-            </div>
-            <div class="text-center">
-                <a href=""><label>Non sei ancora iscritto? Registrati</label></a>
-            </div>
-        </form>
-    </div>
 
     <!--begin::Form-->
-    {{-- <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="{{ route('dashboard') }}" action="{{ route('login') }}">
+    <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="{{ route('dashboard') }}" action="{{ route('login') }}">
         @csrf
-        <!--begin::Heading-->
-        <div class="text-center mb-11">
 
-            <!--begin::Subtitle-->
-            <div class="text-gray-500 fw-semibold fs-6">
-                <img alt="Logo" src="{{ image('logos/logo2.png') }}" class="w-lg-300px"/>
-            </div>
-            <!--end::Subtitle--->
+
+        <!--begin::Login options-->
+        <div class="row g-3 ">
+            <!--end::Col-->
+            <img src="{{image('logos/logo2.png')}}" class="theme-light-show w-300px mx-auto"/>
+            <!--end::Col-->
         </div>
-        <!--begin::Heading-->
+        <!--end::Login options-->
 
 
 
         <!--begin::Input group--->
         <div class="fv-row mb-8">
             <!--begin::Email-->
-            <input type="text" placeholder="Email" name="email" autocomplete="off" class="form-control bg-transparent" value="demo@demo.com"/>
+            <input type="text" placeholder="Email" name="email" autocomplete="off" class="form-control" value="demo@demo.com"/>
             <!--end::Email-->
         </div>
 
         <!--end::Input group--->
         <div class="fv-row mb-3">
             <!--begin::Password-->
-            <input type="password" placeholder="Password" name="password" autocomplete="off" class="form-control bg-transparent" value="demo"/>
+            <input type="password" placeholder="Password" name="password" autocomplete="off" class="form-control" value="demo"/>
             <!--end::Password-->
         </div>
         <!--end::Input group--->
@@ -56,8 +35,8 @@
             <div></div>
 
             <!--begin::Link-->
-            <a href="{{ route('password.request') }}" class="link-primary">
-                Forgot Password ?
+            <a href="{{ route('password.request') }}" class="text-dark ">
+                Password Dimenticata?
             </a>
             <!--end::Link-->
         </div>
@@ -73,34 +52,14 @@
 
         <!--begin::Sign up-->
         <div class="text-gray-500 text-center fw-semibold fs-6">
-            Not a Member yet?
+            Non sei ancora iscritto?
 
             <a href="{{ route('register') }}" class="link-primary">
-                Sign up
+                Registrati
             </a>
         </div>
         <!--end::Sign up-->
-    </form> --}}
-    {{-- <div class="form-section">
-        <img alt="Logo" src="{{ image('logos/logo2.png') }}" class="h-60px h-lg-75px"/>
-        <form action="">
-            <div class="input-addon">
-                <input type="email" placeholder="Email">
-            </div>
-            <div class="input-addon">
-                <input type="password" placeholder="Password">
-            </div>
-            <div class="text-right">
-                <a href="">Password Dimenticata?</a>
-            </div>
-            <div class="loginbtn">
-                <button>Sigh In</button>
-            </div>
-            <div class="text-center">
-                <a href=""><label>Non sei ancora iscritto? Registrati</label></a>
-            </div>
-        </form>
-    </div> --}}
+    </form>
     <!--end::Form-->
 
 </x-auth-layout>
