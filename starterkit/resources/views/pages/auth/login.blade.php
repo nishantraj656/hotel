@@ -1,56 +1,40 @@
 <x-auth-layout>
+    <div class="form-section">
+        <img src="{{ image('logos/logo2.png') }}"  class="logo">
+        <form action="">
+            <div class="input-addon">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-addon">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="text-right">
+                <a href="">Password Dimenticata?</a>
+            </div>
+            <div class="loginbtn">
+                <button>Sigh In</button>
+            </div>
+            <div class="text-center">
+                <a href=""><label>Non sei ancora iscritto? Registrati</label></a>
+            </div>
+        </form>
+    </div>
 
     <!--begin::Form-->
-    <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="{{ route('dashboard') }}" action="{{ route('login') }}">
+    {{-- <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="{{ route('dashboard') }}" action="{{ route('login') }}">
         @csrf
         <!--begin::Heading-->
         <div class="text-center mb-11">
-            <!--begin::Title-->
-            <h1 class="text-dark fw-bolder mb-3">
-                Sign In
-            </h1>
-            <!--end::Title-->
 
             <!--begin::Subtitle-->
             <div class="text-gray-500 fw-semibold fs-6">
-                Your Social Campaigns
+                <img alt="Logo" src="{{ image('logos/logo2.png') }}" class="w-lg-300px"/>
             </div>
             <!--end::Subtitle--->
         </div>
         <!--begin::Heading-->
 
-        <!--begin::Login options-->
-        <div class="row g-3 mb-9">
-            <!--begin::Col-->
-            <div class="col-md-6">
-                <!--begin::Google link--->
-                <a href="{{ url('/auth/redirect/google') }}?redirect_uri={{ url()->current() }}" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                    <img alt="Logo" src="{{ image('svg/brand-logos/google-icon.svg') }}" class="h-15px me-3"/>
-                    Sign in with Google
-                </a>
-                <!--end::Google link--->
-            </div>
-            <!--end::Col-->
 
-            <!--begin::Col-->
-            <div class="col-md-6">
-                <!--begin::Google link--->
-                <a href="#" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                    <img alt="Logo" src="{{ image('svg/brand-logos/apple-black.svg') }}" class="theme-light-show h-15px me-3"/>
-                    <img alt="Logo" src="{{ image('svg/brand-logos/apple-black-dark.svg') }}" class="theme-dark-show h-15px me-3"/>
-                    Sign in with Apple
-                </a>
-                <!--end::Google link--->
-            </div>
-            <!--end::Col-->
-        </div>
-        <!--end::Login options-->
-
-        <!--begin::Separator-->
-        <div class="separator separator-content my-14">
-            <span class="w-125px text-gray-500 fw-semibold fs-7">Or with email</span>
-        </div>
-        <!--end::Separator-->
 
         <!--begin::Input group--->
         <div class="fv-row mb-8">
@@ -96,7 +80,27 @@
             </a>
         </div>
         <!--end::Sign up-->
-    </form>
+    </form> --}}
+    {{-- <div class="form-section">
+        <img alt="Logo" src="{{ image('logos/logo2.png') }}" class="h-60px h-lg-75px"/>
+        <form action="">
+            <div class="input-addon">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-addon">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="text-right">
+                <a href="">Password Dimenticata?</a>
+            </div>
+            <div class="loginbtn">
+                <button>Sigh In</button>
+            </div>
+            <div class="text-center">
+                <a href=""><label>Non sei ancora iscritto? Registrati</label></a>
+            </div>
+        </form>
+    </div> --}}
     <!--end::Form-->
 
 </x-auth-layout>

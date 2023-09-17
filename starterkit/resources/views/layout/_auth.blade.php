@@ -1,8 +1,9 @@
 @extends('layout.master')
+{{addCssFile('assets/css/custom.css')}}
 
 @section('content')
 
-    <!--begin::App-->
+    {{-- <!--begin::App-->
     <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
         <!--begin::Wrapper-->
         <div class="d-flex flex-column flex-lg-row flex-column-fluid">
@@ -37,35 +38,12 @@
             <!--end::Body-->
 
             <!--begin::Aside-->
-            <div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2" style="background-image: url({{ image('misc/auth-bg.png') }})">
+            <div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2" style="background-image: url({{ image('logos/forest.jpg') }})">
                 <!--begin::Content-->
                 <div class="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100">
-                    <!--begin::Logo-->
-                    <a href="{{ route('dashboard') }}" class="mb-12">
-                        <img alt="Logo" src="{{ image('logos/custom-1.png') }}" class="h-60px h-lg-75px"/>
-                    </a>
-                    <!--end::Logo-->
-
                     <!--begin::Image-->
-                    <img class="d-none d-lg-block mx-auto w-275px w-md-50 w-xl-500px mb-10 mb-lg-20" src="{{ image('misc/auth-screens.png') }}" alt=""/>
+                    <img class="d-none d-lg-block mx-auto w-275px w-md-50 w-xl-400px mb-10 mb-lg-20" src="{{ image('logos/logo-min.png') }}" alt=""/>
                     <!--end::Image-->
-
-                    <!--begin::Title-->
-                    <h1 class="d-none d-lg-block text-white fs-2qx fw-bolder text-center mb-7">
-                        Fast, Efficient and Productive
-                    </h1>
-                    <!--end::Title-->
-
-                    <!--begin::Text-->
-                    <div class="d-none d-lg-block text-white fs-base text-center">
-                        In this kind of post, <a href="#" class="opacity-75-hover text-warning fw-bold me-1">the blogger</a>
-
-                        introduces a person they’ve interviewed <br/> and provides some background information about
-
-                        <a href="#" class="opacity-75-hover text-warning fw-bold me-1">the interviewee</a>
-                        and their <br/> work following this is a transcript of the interview.
-                    </div>
-                    <!--end::Text-->
                 </div>
                 <!--end::Content-->
             </div>
@@ -73,6 +51,15 @@
         </div>
         <!--end::Wrapper-->
     </div>
-    <!--end::App-->
+    <!--end::App--> --}}
+    <div class="login-container">
+        <!--begin::Page-->
+        {{ $slot }}
+        <!--end::Page-->
+
+        <div class="img-section">
+            <img src="{{ image('logos/logo-min.png') }}" class="logo">
+        </div>
+    </div>
 
 @endsection
