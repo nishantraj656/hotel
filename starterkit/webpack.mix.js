@@ -25,6 +25,7 @@ const args = getParameters();
 let demo = getDemos()[0];
 
 const dir = 'resources/_keenthemes/src';
+const app_dir = 'resources/_keenthemes/app/src';
 
 mix.options({
     cssNano: {
@@ -51,6 +52,13 @@ mix.sass('resources/mix/plugins.scss', `public/assets/plugins/global/plugins.bun
 mix.sass(`${dir}/sass/style.scss`, `public/assets/css/style.bundle.css`, {sassOptions: {includePaths: ['node_modules']}})
     // .options({processCssUrls: false})
     .scripts(require(`./resources/mix/scripts.js`), `public/assets/js/scripts.bundle.js`);
+
+
+
+// Build app theme css/js
+mix.sass(`${app_dir}/sass/style.scss`, `public/assets/app/css/style.bundle.css`, {sassOptions: {includePaths: ['../node_modules']}})
+    // .options({processCssUrls: false})
+    .scripts(require(`./resources/mix/scripts.js`), `public/assets/app/js/scripts.bundle.js`);
 
 // Build custom 3rd party plugins
 (glob.sync(`resources/mix/vendors/**/*.js`) || []).forEach(file => {
