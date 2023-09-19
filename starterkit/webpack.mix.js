@@ -56,9 +56,9 @@ mix.sass(`${dir}/sass/style.scss`, `public/assets/css/style.bundle.css`, {sassOp
 
 
 // Build app theme css/js
-mix.sass(`${app_dir}/sass/style.scss`, `public/assets/app/css/style.bundle.css`, {sassOptions: {includePaths: ['../node_modules']}})
-    // .options({processCssUrls: false})
-    .scripts(require(`./resources/mix/scripts.js`), `public/assets/app/js/scripts.bundle.js`);
+// mix.sass(`${app_dir}/sass/style.scss`, `public/assets/app/css/style.bundle.css`, {sassOptions: {includePaths: ['../node_modules']}})
+//     // .options({processCssUrls: false})
+//     .scripts(require(`./resources/mix/scripts.js`), `public/assets/app/js/scripts.bundle.js`);
 
 // Build custom 3rd party plugins
 (glob.sync(`resources/mix/vendors/**/*.js`) || []).forEach(file => {

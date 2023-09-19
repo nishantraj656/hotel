@@ -2,21 +2,21 @@
 // Content
 //
 
-
 // Desktop mode
 @include media-breakpoint-up(lg) {
-	.app-content {
-		[data-kt-app-toolbar-enabled="true"]:not([data-kt-app-toolbar-fixed="true"]) & {
-			padding-top: 0;
-		}			
+	.content {
+		padding: 0;
+
+		// Aside enabled
+		.aside-enabled & {			
+			padding-left: get($content-spacing, desktop);
+		}
 	}
 }
 
 // Tablet & mobile modes
 @include media-breakpoint-down(lg) {
-	.app-content { 
-		[data-kt-app-toolbar-enabled="true"]:not([data-kt-app-toolbar-fixed-mobile="true"]) & {
-			padding-top: 0;
-		}
+	.content {
+		padding: get($content-spacing, tablet-and-mobile) 0;
 	}
 }

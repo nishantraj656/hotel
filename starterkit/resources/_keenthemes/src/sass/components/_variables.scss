@@ -21,7 +21,7 @@ $gray-600: #78829D !default;
 $gray-700: #4B5675 !default;
 $gray-800: #252F4A !default;
 $gray-900: #071437 !default;
-
+ 
 // Bootstrap muted color
 $text-muted: $gray-500 !default;
 
@@ -36,7 +36,7 @@ $grays: (
 	"700": $gray-700,
 	"800": $gray-800,
 	"900": $gray-900
-) !default;
+) !default; 
 
 // Bootstrap contextual colors
 // Primary colors
@@ -49,7 +49,7 @@ $primary-inverse: 				$white !default;
 $secondary: 					$gray-300 !default;
 $secondary-active: 				$gray-400 !default;
 $secondary-light: 				$gray-100 !default;
-$secondary-inverse:				$gray-700 !default;
+$secondary-inverse:				$gray-700 !default; 
 
 // Light colors
 $light: 						$gray-100 !default;
@@ -59,25 +59,25 @@ $light-inverse:					$gray-600 !default;
 
 
 // Success colors
-$success: 						#1BC5BD !default;
+$success: 						#1BC5BD !default; 
 $success-active: 				#0BB7AF !default;
 $success-light: 				#C9F7F5 !default;
 $success-inverse: 				$white !default;
 
 // Info colors
-$info: 							#8950FC !default;
+$info: 							#8950FC !default; 
 $info-active: 					#7337EE !default;
 $info-light: 					#EEE5FF !default;
 $info-inverse: 					$white !default;
 
 // Warning colors
-$warning: 						#FFA800 !default;
+$warning: 						#FFA800 !default; 
 $warning-active: 				#EE9D01 !default;
 $warning-light: 				#FFF4DE !default;
 $warning-inverse: 				$white !default;
 
 // Danger colors
-$danger: 						#F64E60 !default;
+$danger: 						#F64E60 !default; 
 $danger-active: 				#EE2D41 !default;
 $danger-light: 					#FFE2E5 !default;
 $danger-inverse: 				$white !default;
@@ -85,7 +85,7 @@ $danger-inverse: 				$white !default;
 // Dark colors
 $dark: 							$gray-900 !default;
 $dark-active: 					darken($gray-900, 3%) !default;
-$dark-light: 					$gray-200 !default;
+$dark-light: 					$gray-200 !default; 
 $dark-inverse: 					$white !default;
 
 // Contextual colors
@@ -99,7 +99,7 @@ $theme-colors: (
 	"danger": $danger,
 	"dark": $dark
 ) !default;
-
+	
 // Contextual active state colors
 $theme-active-colors: (
 	"primary": $primary-active,
@@ -110,7 +110,7 @@ $theme-active-colors: (
 	"warning": $warning-active,
 	"danger":  $danger-active,
 	"dark":    $dark-active
-) !default;
+) !default; 
 
 // Contextual inverse state colors
 $theme-inverse-colors: (
@@ -122,7 +122,7 @@ $theme-inverse-colors: (
 	"warning": $warning-inverse,
 	"danger":  $danger-inverse,
 	"dark":    $dark-inverse
-) !default;
+) !default; 
 
 // Contextual light state colors
 $theme-light-colors: (
@@ -133,7 +133,7 @@ $theme-light-colors: (
 	"warning": $warning-light,
 	"danger":  $danger-light,
 	"dark":    $dark-light
-) !default;
+) !default; 
 
 // Text colors
 $theme-text-colors: (
@@ -156,7 +156,7 @@ $theme-text-colors: (
 	"gray-700":   $gray-700,
 	"gray-800":   $gray-800,
 	"gray-900":   $gray-900
-) !default;
+) !default; 
 
 // Options
 //
@@ -300,8 +300,8 @@ $component-checked-color:        $primary-inverse !default;
 $component-checked-bg:           $primary !default;
 
 // Keenthemes custom transition settings
-$transition-link: color .2s ease !default;
-$transition-input: color .2s ease !default;
+$transition-link: color .2s ease !default; 
+$transition-input: color .2s ease !default; 
 
 // Box shadow
 // Shadows
@@ -331,7 +331,7 @@ $gutters: (
 //
 // Font, line-height, and color for body text, headings, and more.
 // Font family
-$font-family-sans-serif: 'Inter', sans-serif !default;//Inter, Helvetica, "sans-serif" !default;
+$font-family-sans-serif: Inter, Helvetica, "sans-serif" !default;
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `13px`
 $font-size-lg: $font-size-base * 1.075 !default;   // 14.04px
@@ -380,7 +380,7 @@ $font-sizes: (
 	sm: $font-size-sm,
 	base: $font-size-base, // 13px
 	lg: $font-size-lg,
-
+	
 	fluid: 100%, // 100%
 
 	2x: $font-size-base * 2,  // 26px
@@ -397,7 +397,7 @@ $font-sizes: (
 	4qx: $font-size-base * 4.25, // 55.25px
 	4hx: $font-size-base * 4.5,  // 58.5px
 	4tx: $font-size-base * 4.75, // 61.75px
-
+	
 	5x: $font-size-base * 5,  // 65px
 	5qx: $font-size-base * 5.25, // 68.25px
 	5hx: $font-size-base * 5.5,  // 71.5px
@@ -572,7 +572,7 @@ $inpur-autifill-bg-color:					var(--#{$prefix}gray-100) !default;
 $input-solid-color:         	            var(--#{$prefix}gray-700) !default;
 $input-solid-bg:                            var(--#{$prefix}gray-100) !default;
 $input-solid-bg-focus:                      var(--#{$prefix}gray-200) !default;
-$input-solid-placeholder-color:             var(--#{$prefix}gray-500) !default;
+$input-solid-placeholder-color:             var(--#{$prefix}gray-500) !default; 
 
 
 // Form checks
@@ -640,7 +640,7 @@ $form-switch-checked-color:                         $component-checked-color !de
 $form-switch-checked-bg-image:                      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-checked-color}'/></svg>") !default;
 $form-switch-checked-bg-position:                   right center !default;
 
-
+	
 // Input groups
 $input-group-addon-bg:                              var(--#{$prefix}gray-100) !default;
 $input-group-addon-color:                           var(--#{$prefix}gray-700) !default;
@@ -804,17 +804,17 @@ $popover-inner-border-radius:			$border-radius !default;
 $popover-box-shadow:    				$dropdown-box-shadow !default;
 $popover-header-bg:     				$popover-bg !default;
 $popover-header-color:     				var(--#{$prefix}gray-800) !default;
-$popover-header-font-weight:     		500 !default;
-$popover-header-font-size:    			1rem !default;
+$popover-header-font-weight:     		500 !default; 
+$popover-header-font-size:    			1rem !default; 
 $popover-header-padding-y:    			1rem !default;
 $popover-header-padding-x:    			1.25rem !default;
-$popover-header-border-color:           $border-color !default;
+$popover-header-border-color:           $border-color !default; 
 $popover-body-color:    				var(--#{$prefix}gray-800) !default;
 $popover-body-padding-y:                1.25rem !default;
 $popover-body-padding-x:                1.25rem !default;
-$popover-dissmis-btn-size:            	1.25rem !default;
-$popover-dissmis-btn-top:               0.85rem !default;
-$popover-dissmis-btn-end:               0.85rem !default;
+$popover-dissmis-btn-size:            	1.25rem !default; 
+$popover-dissmis-btn-top:               0.85rem !default; 
+$popover-dissmis-btn-end:               0.85rem !default; 
 
 
 // Toasts
@@ -945,8 +945,8 @@ $code-box-shadow:           0px 3px 9px rgba(0, 0, 0, 0.08) !default;
 $code-padding:              0.1rem 0.4rem !default;
 $code-margin:               0 0.5rem !default;
 $code-font-weight:          400 !default;
-$code-border-radius:        0.3rem !default;
-$code-color:                #b93993 !default;
+$code-border-radius:        0.3rem !default; 
+$code-color:                #b93993 !default; 
 $code-space:                0.25rem !default;
 
 // Opacity
@@ -1119,7 +1119,7 @@ $drawer-transition-speed: 0.3s !default;
 $drawer-overlay-bg-color: rgba($black, 0.2) !default;
 $drawer-overlay-animation-speed: 0.3s !default;
 
-// Keenthemes menu component
+// Keenthemes menu component   
 $menu-dropdown-box-shadow: $dropdown-box-shadow !default;
 $menu-dropdown-z-index: 107 !default;
 $menu-dropdown-bg-color: $dropdown-bg !default;
@@ -1151,32 +1151,32 @@ $menu-arrow-size: 9px !default;
 $menu-arrow-space: 5px !default;
 $menu-heading-color: $text-muted !default;
 
-// Keenthemes scrollbar component
+// Keenthemes scrollbar component 
 $scrollbar-size: 5px !default;
 $scrollbar-overlay-size: 19px !default;
 $scrollbar-overlay-space: 7px !default;
 $scrollbar-color: $gray-200 !default;
 $scrollbar-hover-color: $gray-300 !default;
 
-// Keenthemes overlay component
+// Keenthemes overlay component 
 $overlay-bg: rgba($black, 0.05)  !default;
 
-// Keenthemes blockui component
+// Keenthemes blockui component 
 $blockui-overlay-bg: rgba($black, 0.05) !default;
 $blockui-message-bg: $tooltip-bg !default;
 $blockui-message-box-shadow: $tooltip-box-shadow !default;
 
-// Keenthemes rating component
+// Keenthemes rating component 
 $rating-color-default: $gray-400 !default;
 $rating-color-active: #FFAD0F !default;
 
-// Keenthemes ribbon component
+// Keenthemes ribbon component 
 $ribbon-label-box-shadow: 0px -1px 5px 0px rgba($dark, 0.1) !default;
 $ribbon-label-bg: $primary !default;
 $ribbon-label-border-color: darken($primary, 20%) !default;
 $ribbon-clip-bg: $dark !default;
 
-// Keenthemes fixed component
+// Keenthemes fixed component 
 $fixed-z-index: 101 !default;
 
 // Engage panel

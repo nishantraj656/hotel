@@ -45,7 +45,7 @@ License: For each use you must have a valid license purchased only from above li
 
         <!--begin::Global Stylesheets Bundle(used by all pages)-->
         @foreach(getGlobalAssets('css') as $path)
-            {!! sprintf('<link rel="stylesheet" href="%s">', asset('/app/'.$path)) !!}
+            {!! sprintf('<link rel="stylesheet" href="%s">', asset($path)) !!}
         @endforeach
         <!--end::Global Stylesheets Bundle-->
 
@@ -10370,30 +10370,59 @@ License: For each use you must have a valid license purchased only from above li
 		</div>
 		<!--end::Modal - Invite Friend-->
 		<!--end::Modals-->
-		<!--begin::Javascript-->
-		<script>var hostUrl = "assets/";</script>
-		<!--begin::Global Javascript Bundle(mandatory for all pages)-->
-		<script src="assets/plugins/global/plugins.bundle.js"></script>
-		<script src="assets/js/scripts.bundle.js"></script>
-		<!--end::Global Javascript Bundle-->
-		<!--begin::Vendors Javascript(used for this page only)-->
-		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-		<!--end::Vendors Javascript-->
-		<!--begin::Custom Javascript(used for this page only)-->
-		<script src="assets/js/custom/pages/user-profile/general.js"></script>
-		<script src="assets/js/widgets.bundle.js"></script>
-		<script src="assets/js/custom/widgets.js"></script>
-		<script src="assets/js/custom/apps/chat/chat.js"></script>
-		<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
-		<script src="assets/js/custom/utilities/modals/create-app.js"></script>
-		<script src="assets/js/custom/utilities/modals/offer-a-deal/type.js"></script>
-		<script src="assets/js/custom/utilities/modals/offer-a-deal/details.js"></script>
-		<script src="assets/js/custom/utilities/modals/offer-a-deal/finance.js"></script>
-		<script src="assets/js/custom/utilities/modals/offer-a-deal/complete.js"></script>
-		<script src="assets/js/custom/utilities/modals/offer-a-deal/main.js"></script>
-		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
-		<!--end::Custom Javascript-->
-		<!--end::Javascript-->
+
+<!--begin::Javascript-->
+<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+@foreach(getGlobalAssets() as $path)
+    {!! sprintf('<script src="%s"></script>', asset($path)) !!}
+@endforeach
+<!--end::Global Javascript Bundle-->
+
+<!--begin::Vendors Javascript(used by this page)-->
+@foreach(getVendors('js') as $path)
+    {!! sprintf('<script src="%s"></script>', asset($path)) !!}
+@endforeach
+<!--end::Vendors Javascript-->
+
+<!--begin::Custom Javascript(optional)-->
+@foreach(getCustomJs() as $path)
+    {!! sprintf('<script src="%s"></script>', asset($path)) !!}
+@endforeach
+<!--end::Custom Javascript-->
+@stack('scripts')
+<!--end::Javascript-->
+
+<script>
+    document.addEventListener('livewire:load', () => {
+        Livewire.on('success', (message) => {
+            toastr.success(message);
+        });
+        Livewire.on('error', (message) => {
+            toastr.error(message);
+        });
+
+        Livewire.on('swal', (message, icon, confirmButtonText) => {
+            if (typeof icon === 'undefined') {
+                icon = 'success';
+            }
+            if (typeof confirmButtonText === 'undefined') {
+                confirmButtonText = 'Ok, got it!';
+            }
+            Swal.fire({
+                text: message,
+                icon: icon,
+                buttonsStyling: false,
+                confirmButtonText: confirmButtonText,
+                customClass: {
+                    confirmButton: 'btn btn-primary'
+                }
+            });
+        });
+    });
+</script>
+
+@livewireScripts
+
 	</body>
 	<!--end::Body-->
 </html>
